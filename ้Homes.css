@@ -1,0 +1,148 @@
+/* Reset และพื้นฐาน */
+* {margin:0; padding:0; box-sizing:border-box;}
+body, html {
+  height:100%;
+  overflow:hidden;
+  font-family:'Fredoka One', cursive;
+}
+
+/* พื้นหลัง Gradient */
+.splash {
+  width:100%; height:100%;
+  background: linear-gradient(135deg, #6a11cb, #2575fc, #8360c3);
+  background-size: 300% 300%;
+  animation: gradientMove 10s infinite alternate;
+  display:flex; justify-content:center; align-items:center;
+  flex-direction:column; color:#fff; text-align:center;
+  position:relative;
+  transition: all 1s ease;
+}
+
+@keyframes gradientMove {
+  0%{background-position:0% 50%;}
+  100%{background-position:100% 50%;}
+}
+
+/* Title Hochin */
+.title {
+  font-size:5rem;
+  color:#fff;
+  text-shadow: 0 0 20px rgba(255,255,255,0.8), 
+               0 0 40px rgba(150,100,255,1);
+  margin-bottom:2rem;
+  animation: wiggle 3s infinite ease-in-out;
+}
+
+@keyframes wiggle {
+  0%,100% {transform: rotate(0deg);}
+  25% {transform: rotate(1.5deg);}
+  50% {transform: rotate(-1.5deg);}
+  75% {transform: rotate(1.5deg);}
+}
+
+/* ปุ่ม Start */
+.btn-start {
+  padding: 14px 40px;
+  background: linear-gradient(90deg, #ffdd00, #ff6a00);
+  color:#fff;
+  font-size:1.3rem;
+  border:none;
+  border-radius:50px;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+  transition:transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-start:hover {
+  transform: scale(1.1);
+  box-shadow:0 0 30px rgba(255,200,0,0.9);
+}
+
+/* อิโมจิ Summer */
+.decor {
+  position:absolute;
+  font-size:2.5rem;
+  opacity:0.9;
+  animation: float 6s infinite ease-in-out;
+}
+
+.sun { top:8%; left:12%; animation-delay:0s;}
+.wave { bottom:15%; right:15%; animation-delay:1s;}
+.ice { top:25%; right:10%; animation-delay:2s;}
+.tree { bottom:10%; left:8%; animation-delay:3s;}
+.beach { top:15%; right:20%; animation-delay:1.5s;}
+.surf { bottom:20%; left:25%; animation-delay:2.5s;}
+.melon { top:35%; left:20%; animation-delay:3.5s;}
+.flower { bottom:25%; right:25%; animation-delay:4s;}
+
+@keyframes float {
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
+}
+
+/* เอฟเฟกต์ fade out */
+.splash.fade-out {
+  opacity:0;
+  transform: scale(1.2);
+}
+
+/* ============================= */
+/* 📱 Mobile (≤440px)            */
+/* ============================= */
+@media (max-width: 440px) {
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .btn-start {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+  }
+  .decor {
+    font-size: 1.4rem;
+    opacity: 0.75;
+  }
+  .sun { top:5%; left:8%; }
+  .wave { bottom:10%; right:8%; }
+  .ice { top:20%; right:6%; }
+  .tree { bottom:8%; left:6%; }
+}
+
+/* ============================= */
+/* 📲 Tablet (441px–768px)       */
+/* ============================= */
+@media (min-width: 441px) and (max-width: 768px) {
+  .title {
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .btn-start {
+    font-size: 1.1rem;
+    padding: 12px 30px;
+  }
+  .decor {
+    font-size: 2rem;
+    opacity: 0.85;
+  }
+  .sun { top:6%; left:10%; }
+  .wave { bottom:12%; right:10%; }
+  .ice { top:22%; right:8%; }
+  .tree { bottom:8%; left:8%; }
+}
+
+/* ============================= */
+/* 💻 Desktop/Notebook (≥1440px) */
+/* ============================= */
+@media (min-width: 1440px) {
+  .title {
+    font-size: 6rem;
+    margin-bottom: 2.5rem;
+  }
+  .btn-start {
+    font-size: 1.5rem;
+    padding: 16px 50px;
+  }
+  .decor {
+    font-size: 3.2rem;
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>บ้านของเราาาาา</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="้Homes.css">
+</head>
+<body>
+  <div class="splash" id="splash">
+    <!-- อิโมจิ Summer -->
+    <div class="decor sun">☀️</div>
+    <div class="decor wave">🌊</div>
+    <div class="decor ice">🍹</div>
+    <div class="decor tree">🌴</div>
+    <div class="decor beach">🏖️</div>
+    <div class="decor surf">🏄‍♂️</div>
+    <div class="decor melon">🍉</div>
+    <div class="decor flower">🌺</div>
+    
+    <!-- Title -->
+    <h1 class="title">Hochin</h1>
+    
+    <!-- ปุ่ม Start -->
+    <button class="btn-start" onclick="startSite()">Start</button>
+  </div>
+
+  <script>
+    function startSite(){
+      let splash = document.getElementById("splash");
+      splash.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = "homes.html";
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

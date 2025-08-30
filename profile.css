@@ -1,0 +1,193 @@
+body {
+  font-family: 'Prompt', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb, #b993d6, #8ca6db);
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  background: #fffdf7;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(161, 140, 209, 0.3);
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #a18cd1;
+}
+
+/* ปุ่มบ้าน */
+.home-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  color: #8e44ad;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.home-btn:hover {
+  color: #d291bc;
+  transform: scale(1.2) rotate(10deg);
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  border: 6px solid #a18cd1;
+  overflow: hidden;
+  animation: spin 12s linear infinite;
+  box-shadow: 0 0 20px rgba(174, 144, 255, 0.5);
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+.info {
+  text-align: center;
+}
+
+.info h1 {
+  font-size: 28px;
+  margin: 10px 0;
+  color: #8e44ad;
+  text-shadow: 1px 1px 2px rgba(174, 144, 255, 0.4);
+}
+
+.info p {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #555;
+}
+
+.socials {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.socials a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #6c5ce7;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.socials a:hover {
+  color: #d291bc;
+  transform: translateY(-4px) scale(1.1);
+}
+
+/* ===================== */
+/* Responsive Design     */
+/* ===================== */
+
+/* Laptop 1440px */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1000px;
+    padding: 60px;
+  }
+  .profile-pic {
+    width: 220px;
+    height: 220px;
+    border-width: 8px;
+  }
+  .info h1 {
+    font-size: 36px;
+  }
+  .info p {
+    font-size: 20px;
+  }
+  .socials a {
+    font-size: 24px;
+  }
+}
+
+/* Tablet 768px */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px;
+    max-width: 600px;
+  }
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-width: 5px;
+  }
+  .info h1 {
+    font-size: 24px;
+  }
+  .info p {
+    font-size: 16px;
+  }
+  .socials {
+    gap: 18px;
+  }
+  .socials a {
+    font-size: 20px;
+  }
+  .home-btn {
+    font-size: 24px;
+  }
+}
+
+/* Mobile 440px */
+@media (max-width: 440px) {
+  .container {
+    width: 95%;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-width: 4px;
+  }
+  .info h1 {
+    font-size: 20px;
+  }
+  .info p {
+    font-size: 14px;
+  }
+  .socials {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .socials a {
+    font-size: 18px;
+  }
+  .home-btn {
+    font-size: 20px;
+    top: 15px;
+    right: 15px;
+  }
+}
